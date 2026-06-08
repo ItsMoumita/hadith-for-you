@@ -4,12 +4,13 @@
 
 // dependencies
 import math from "./lib/math.js"
+import hadith from "./lib/hadith/index.js";
 
 
 console.log(math.getRandomNumber(100,1003434));
 
 
-
+console.log(hadith.allHadith());
 
 
 
