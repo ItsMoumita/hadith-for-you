@@ -1,17 +1,26 @@
 // Title : Basic Node app example
-// Descriptiom: Simple node application that print random hadith per second interval 
+// Description: Simple node application that print random hadith per second interval 
 // Author: Moumita
 
 // dependencies
-import math from "./lib/math.js"
 import hadith from "./lib/hadith/index.js";
+import math from "./lib/math.js"
+
+// module scaffolding 
+const app = {};
 
 
-console.log(math.getRandomNumber(100,1003434));
+app.printAHadith = function printAHadith() {
+
+    const allHadith = hadith.allHadith();
+    const numOfHadith = allHadith.length;
+    
+    const getRandomNumber = math.getRandomNumber(1, numOfHadith);
+
+    const selectedHadith = allHadith[getRandomNumber - 1];
+    console.log(selectedHadith);
+}
 
 
-console.log(hadith.allHadith());
 
-
-
-console.log("Node.js is working")
+app.printAHadith();
