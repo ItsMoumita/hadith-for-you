@@ -23,4 +23,8 @@ app.printAHadith = function printAHadith() {
 
 
 
-app.printAHadith();
+// running function infinite times 
+
+app.indefiniteLoop = setInterval(()=> {
+    app.printAHadith();
+}, 1000);
